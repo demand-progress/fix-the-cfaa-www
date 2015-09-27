@@ -263,7 +263,7 @@ header ul li {
     opacity: 0;
 }
 .action .email_signup input {
-    width: 50%;
+    width: 100%;
     vertical-align: top;
     box-sizing: border-box;
     height: 60px;
@@ -276,28 +276,25 @@ header ul li {
     border-right: 1px solid #ccc;
     border-top: 1px solid #ccc;
 }
-.action .email_signup input:nth-of-type(1),
-.action .email_signup input:nth-of-type(2) {
-    border-top: none;
-}
-@media screen and (max-width: 480px) {
-    .action .email_signup input:nth-of-type(2) {
-        border-top: 1px solid #ccc;
-    }
-
-    .action .email_signup input,
-    .action .email_signup select {
-        width: 100%;
-        font-size: 18px;
-    }
-}
 .action .email_signup button {
-    width: 100%;
     background: #36c994;
+    padding: 0 16px;
+    width: 100%;
 }
 .action .email_signup button:hover {
     background: #26b984;
 }
+
+@media screen and (max-width: 479px) {
+    .action .email_signup input {
+        font-size: 16px;
+    }
+    .action .email_signup button {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}
+
 .action .or {
     display: inline-block;
     height: 60px;
