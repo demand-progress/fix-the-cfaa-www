@@ -35,8 +35,7 @@ a:hover {
     color: #eee;
 }
 body {
-    background: #161616 url(../images/background.jpg) center top no-repeat;
-    background-size: 100% auto;
+    background: #030e21;
     font-family: "Open Sans";
     text-align: center;
 }
@@ -142,6 +141,9 @@ img.demo {
     margin-bottom: 10px;
 }
 header {
+    background: #030e21 url(../images/background.jpg) center top no-repeat;
+    background-size: cover;
+    padding: 0 0 50px;
 }
 header .desktop p {
     padding-top: 24px;
@@ -181,6 +183,9 @@ header p.protest {
     max-width: 780px;
     font-size: 17px;
     text-align: left;
+}
+header .mobile p {
+    margin: 50px 0 0;
 }
 header h1 {
     font-size: 48px;
@@ -228,7 +233,7 @@ header ul li {
 
 .action {
     background: #353535;
-    margin: 35px auto 50px auto;
+    margin: 35px auto 0;
     max-width: 600px;
     padding: 24px 60px 32px;
 }
@@ -388,41 +393,49 @@ p.explanation {
 }
 
 section {
-    background: #282828;
+    background: #030e21;
     padding: 10px 0px 25px 0px;
 }
 section.dark {
     background: #171717;
 }
 section h2 {
-    font-weight: 300;
-    margin-top: 45px;
+    color: #ffa600;
+    font-weight: bold;
     margin-bottom: 35px;
+    margin-top: 45px;
 }
 section hr {
-    width: 140px;
-    border: 0px;
     border-bottom: 1px solid #6b6b6b;
+    border: 0px;
     margin-bottom: 35px;
+    width: 140px;
+}
+section a {
+    color: #ffa600;
+    font-weight: bold;
+}
+section a:hover {
+    color: #fff;
 }
 section p {
-    max-width: 800px;
-    margin: 0px auto 25px auto;
-    text-align: center;
-    font-size: 18px;
     color: #d5d5d5;
-    font-weight: 300;
-    line-height: 24px;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.6;
+    margin: 0px auto 25px auto;
+    max-width: 860px;
     padding: 0 32px;
+    text-align: center;
 }
 section p strong, header p strong {
     font-weight: bold;
 }
 .share {
-    border-radius: 60px;
-    padding: 10px;
     background: #222;
+    border-radius: 60px;
     display: inline-block;
+    padding: 10px;
 }
 section .share {
     margin: 0 0 22px;
@@ -460,17 +473,16 @@ section .share {
     background-color: #3089ef;
 }
 .logos {
-    margin: 50px 0px 0px 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 0;
+    padding: 68px 0 32px;
     overflow: hidden;
 }
 .logos a {
-    opacity: .6;
+    opacity: 1;
 
     -webkit-transition: opacity 0.3s;
             transition: opacity 0.3s;
-}
-.logos a:hover {
-    opacity: .8;
 }
 .logos img {
     border-radius: 5px;
