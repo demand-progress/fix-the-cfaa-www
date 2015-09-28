@@ -143,7 +143,7 @@ img.demo {
 header {
     background: #030e21 url(../images/background.jpg) center top no-repeat;
     background-size: cover;
-    padding: 0 0 50px;
+    padding: 32px 0 50px;
 }
 header .desktop p {
     padding-top: 24px;
@@ -161,14 +161,17 @@ header em {
     font-style: italic;
 }
 header p {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 20px;
-    font-weight: 300;
-    line-height: 30px;
+    font-weight: normal;
+    line-height: 1.6;
     margin: 0px auto;
     max-width: 860px;
     padding: 0 32px;
     text-align: center;
+}
+header p .red {
+    color: #ff0903;
 }
 header p a.red-brief-link {
     color: #A82424;
@@ -188,13 +191,30 @@ header .mobile p {
     margin: 50px 0 0;
 }
 header h1 {
-    font-size: 48px;
-    word-wrap: break-word;
+    background: rgba(3, 14, 33, 0.44);
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: normal;
+    margin: 0 auto;
+    max-width: 550px;
+    padding: 4px 0 8px;
+}
+header h1 .red {
+    color: #ff0903;
 }
 header h2 {
-    color: #A82424;
-    font-size: 36px;
-    padding: 12px 32px 0px;
+    background: rgba(3, 14, 33, 0.44);
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: normal;
+    margin: 0 auto;
+    max-width: 220px;
+    padding: 8px 0 4px;
+}
+header h2 .small {
+    font-size: 30px;
 }
 header ul {
     list-style-type: disc;
@@ -232,10 +252,10 @@ header ul li {
 }
 
 .action {
-    background: #353535;
+    background: rgba(3, 14, 33, 0.44);
     margin: 35px auto 0;
     max-width: 600px;
-    padding: 24px 60px 32px;
+    padding: 28px 64px;
 }
 
 .action h4 {
@@ -268,26 +288,29 @@ header ul li {
     opacity: 0;
 }
 .action .email_signup input {
-    width: 100%;
-    vertical-align: top;
-    box-sizing: border-box;
-    height: 60px;
-    border: 0px;
-    line-height: 60px;
-    padding: 0px 20px;
-    font-size: 25px;
-    font-family: "Open Sans";
-    font-weight: 100;
+    border: 0;
     border-right: 1px solid #ccc;
     border-top: 1px solid #ccc;
-}
-.action .email_signup button {
-    background: #36c994;
-    padding: 0 16px;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    font-size: 25px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0px 20px;
+    vertical-align: top;
     width: 100%;
 }
+.action .email_signup button {
+    background-color: #ffa600;
+    font-weight: bold;
+    padding: 0 16px;
+    width: 100%;
+
+    -webkit-transition: background-color 0.24s;
+            transition: background-color 0.24s;
+}
 .action .email_signup button:hover {
-    background: #26b984;
+    background-color: #ff8a00;
 }
 
 @media screen and (max-width: 479px) {
@@ -296,7 +319,7 @@ header ul li {
     }
     .action .email_signup button {
         font-size: 16px;
-        line-height: 1.4;
+        line-height: 1.3;
     }
 }
 
@@ -333,13 +356,17 @@ header ul li {
 }
 .action span.disclaimer {
     clear: both;
-    color: #898989;
+    color: #fff;
     display: block;
     font-size: 15px;
     line-height: 1.4;
     margin: 20px auto 0;
     max-width: 430px;
     text-align: center;
+}
+.action span.disclaimer a {
+    color: #fff;
+    text-decoration: none;
 }
 
 button {
@@ -394,7 +421,7 @@ p.explanation {
 
 section {
     background: #030e21;
-    padding: 10px 0px 25px 0px;
+    padding: 0 0 25px;
 }
 section.dark {
     background: #171717;
@@ -414,12 +441,16 @@ section hr {
 section a {
     color: #ffa600;
     font-weight: bold;
+    text-decoration: none;
+
+    -webkit-transition: color 0.24s;
+            transition: color 0.24s;
 }
 section a:hover {
-    color: #fff;
+    color: #ff8a00;
 }
 section p {
-    color: #d5d5d5;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 20px;
     font-weight: normal;
     line-height: 1.6;
