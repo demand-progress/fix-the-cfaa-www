@@ -456,6 +456,9 @@ section a {
 section a:hover {
     color: #ff8a00;
 }
+section .share a:hover {
+    color: #fff;
+}
 section p {
     color: rgba(255, 255, 255, 0.9);
     font-size: 20px;
