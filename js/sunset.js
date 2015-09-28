@@ -123,7 +123,7 @@ document.querySelector('.email_signup form').addEventListener('submit', function
 
     var phone = document.querySelector('input[type=tel]').value.replace(/[^\d]/g, '');
 
-    if (phone.length < 10) {
+    if (phone.length !== 10) {
         return alert('Please enter your 10 digit phone number.');
     }
 
