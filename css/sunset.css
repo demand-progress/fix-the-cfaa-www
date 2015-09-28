@@ -234,19 +234,23 @@ header ul li {
     margin-bottom: 10px;
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 559px) {
     header h1 {
-        font-size: 28px;
-        letter-spacing: 7px;
+        font-size: 36px;
+        max-width: none;
+        padding: 2px 32px 16px;
+        width: 100%;
     }
 
     header h2 {
-        font-size: 22px;
-        line-height: 1.2;
+        font-size: 28px;
+        max-width: none;
+        padding: 16px 0 2px;
+        width: 100%;
     }
 
-    header .hide-on-mobile {
-        display: none;
+    header h2 .small {
+        font-size: 18px;
     }
 }
 
@@ -521,6 +525,7 @@ section .share {
 .logos img {
     border-radius: 5px;
     max-width: 280px;
+    width: 80%;
     height: auto;
     vertical-align: middle;
     margin: 0px 20px 32px;
