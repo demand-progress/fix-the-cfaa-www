@@ -111,13 +111,6 @@ if (navigator.userAgent.match(/Android 2\.3/)) {
 
 
 
-// Fill in dynamic form fields
-document.querySelector('[name=action_user_agent]').value = navigator.userAgent;
-document.querySelector('[name=source]').value = org.id;
-document.querySelector('[name=url]').value = location.href;
-
-
-
 var requiredFields = [
     'first_name',
     'email',
@@ -126,41 +119,26 @@ var requiredFields = [
 ];
 
 document.querySelector('.email_signup form').addEventListener('submit', function(e) {
-    var eligible = document.querySelector('[name=eligible]');
-    if (!eligible.checked) {
-        e.preventDefault();
-        return alert('Signers must be citizens or permanent residents of the United States, who are 18 years of age or older. You can also help by sharing the page. Thanks for your support!');
+    e.preventDefault();
+
+    var phone = document.querySelector('input[type=tel]').value.replace(/[^\d]/g, '');
+
+    if (phone.length < 10) {
+        return alert('Please enter your 10 digit phone number.');
     }
 
-    for (var i = 0; i < requiredFields.length; i++) {
-        var field = requiredFields[i];
+    var url = 'https://dp-call-congress.herokuapp.com/create?campaignId=fixthecfaa&userPhone=' + phone;
 
-        if (!document.getElementById(field).value) {
-            e.preventDefault();
-            alert('Please enter your ' + field.replace(/_/g, ' ') + '.');
-            return document.getElementById(field).focus();
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            console.log(xhr.response);
         }
-    }
+    };
+    xhr.open('get', url, true);
+    xhr.send();
 
-    // document.activeElement.blur();
-    // var thanks = document.getElementById('thanks');
-    // document.querySelector('form button').setAttribute('disabled', true);
-    // thanks.style.display = 'block';
-    // thanks.clientWidth;
-    // thanks.style.opacity = 1;
-
-    // // Send to Queue
-    // var xhr1 = new XMLHttpRequest();
-    // xhr1.onreadystatechange = function() {
-    //     if (xhr1.readyState === 4) {
-    //         // console.log('response:', xhr1.response);
-    //     }
-    // };
-    // xhr1.open('post', 'https://queue.fightforthefuture.org/action', true);
-    // xhr1.send(data);
-
-    // modal_show('thank-you');
-    // document.querySelector('input[type=tel]').focus();
+    modal_show('call_tool_script');
 }, false);
 
 function modal_show(id) {
