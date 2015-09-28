@@ -138,6 +138,9 @@ document.querySelector('.email_signup form').addEventListener('submit', function
     xhr.open('get', url, true);
     xhr.send();
 
+    document.activeElement.blur();
+    showThanks();
+
     modal_show('call_tool_script');
 }, false);
 
