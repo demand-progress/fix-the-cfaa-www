@@ -173,6 +173,12 @@ header p {
 header p .red {
     color: #ff0903;
 }
+header p a {
+    color: #ff0903;
+}
+header p a:hover {
+    color: #E40500;
+}
 header p a.red-brief-link {
     color: #A82424;
     font-weight: bold;
